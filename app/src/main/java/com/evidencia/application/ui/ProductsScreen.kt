@@ -26,6 +26,13 @@ import com.evidencia.application.R
 import com.evidencia.application.ui.theme.EmeraldGreen
 import com.evidencia.application.ui.theme.IntenseBlue
 
+data class Product(
+    val name: String,
+    val description: String,
+    val price: String,
+    @DrawableRes val imageRes: Int
+)
+
 @Composable
 fun ProductsScreen() {
     val context = LocalContext.current
@@ -111,18 +118,11 @@ fun ProductsScreen() {
                     Toast.makeText(context, "Elegiste: ${product.name}", Toast.LENGTH_SHORT).show()
                 }
             }
-            Spacer(modifier = Modifier.height(40.dp))
+            Spacer(modifier = Modifier.height(65.dp))
         }
         Footer()
     }
 }
-
-data class Product(
-    val name: String,
-    val description: String,
-    val price: String,
-    @DrawableRes val imageRes: Int
-)
 
 @Composable
 fun ProductCard(product: Product, onClick: () -> Unit) {

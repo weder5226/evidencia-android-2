@@ -13,5 +13,5 @@ sealed class Screen(
 ) {
     object Home : Screen("home", "Inicio", Icons.Filled.Home)
     object Products : Screen("products", "Productos", Icons.Filled.Star)
-    object Info : Screen("info", "Información", Icons.Filled.Info)
+    object Info : Screen("info", "Conócenos", Icons.Filled.Info)
 }

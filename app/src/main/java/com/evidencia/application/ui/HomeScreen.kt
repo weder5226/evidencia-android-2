@@ -103,7 +103,7 @@ fun HomeScreen() {
                 )
             }
 
-            Spacer(modifier = Modifier.height(50.dp))
+            Spacer(modifier = Modifier.height(65.dp))
         }
         Footer()
     }
