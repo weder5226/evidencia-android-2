@@ -4,7 +4,10 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material3.DrawerValue
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalDrawerSheet
@@ -76,6 +79,23 @@ fun AppNavigation() {
                         )
                     )
                 }
+                Spacer(modifier = Modifier.height(16.dp))
+
+//                Admin Panel Item
+                HorizontalDivider()
+                NavigationDrawerItem(
+                    label = { Text(Screen.Admin.title) },
+                    icon = { Icon(Screen.Admin.icon, contentDescription = null) },
+                    selected = false,
+                    onClick = {
+                        scope.launch { drawerState.close() }
+                        navController.navigate(Screen.Admin.route) {
+                            popUpTo(navController.graph.startDestinationId) { saveState = true }
+                            launchSingleTop = true
+                            restoreState = true
+                        }
+                    }
+                )
             }
         }
     ) {
@@ -91,6 +111,7 @@ fun AppNavigation() {
                 composable(Screen.Home.route) { HomeScreen() }
                 composable(Screen.Products.route) { ProductsScreen() }
                 composable(Screen.Info.route) { InfoScreen() }
+                composable(Screen.Admin.route) { AdminLoginScreen() }
             }
         }
     }
