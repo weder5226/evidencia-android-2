@@ -81,7 +81,7 @@ fun AppNavigation() {
     ) {
         Scaffold(
             topBar = { Header(scope, drawerState) },
-            bottomBar = { Footer() }
+//            bottomBar = { Footer() }
         ) { padding ->
             NavHost(
                 navController = navController,
