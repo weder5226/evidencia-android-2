@@ -126,7 +126,9 @@ fun FeatureIcon(icon: ImageVector, label: String) {
 @Composable
 fun InfoCard(title: String, content: String) {
     Card(
-        modifier = Modifier.fillMaxWidth().padding(horizontal = 25.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 25.dp),
         shape = RoundedCornerShape(10.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {

@@ -38,7 +38,7 @@ fun AppNavigation() {
     ModalNavigationDrawer(
         drawerState = drawerState,
         drawerContent = {
-            ModalDrawerSheet (
+            ModalDrawerSheet(
                 modifier = Modifier.width(260.dp)
             ) {
                 Spacer(Modifier.height(16.dp))

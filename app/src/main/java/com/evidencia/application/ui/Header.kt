@@ -27,7 +27,7 @@ import kotlinx.coroutines.launch
 fun Header(scope: CoroutineScope, drawerState: DrawerState) {
     TopAppBar(
         title = {
-            Row (
+            Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.Center
             ) {
